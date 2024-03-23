@@ -1,77 +1,57 @@
-<!-- ============================================ -->
-<!--                   Footer                     -->
-<!-- ============================================ -->
-
-<footer id="footer">
-    <div class="container">
-        <div class="left-section">
-            <a class="logo" href="/"><img loading="lazy" decoding="async" src="/assets/svgs/logo-white.svg" alt="logo" width="264" height="78"></a>
-            <p>
-                Extra content if you need it, if not you can delete this whole p tag. I usually do.
-            </p>
-        </div>
-        <div class="right-section">
-            <div class="lists">
-                <ul>
-                    <li>
-                        <h2>Information</h2>
-                    </li>
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="/about">About Us</a>
-                    </li>
-                    <li>
-                        <a href="/projects">Projects</a>
-                    </li>
-                    <li>
-                        <a href="/testimonials">Reviews</a>
-                    </li>
-                    <li>
-                        <a href="/contact">Contact</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <h2>Services</h2>
-                    </li>
-                    <li>Service1</li>
-                    <li>Service2</li>
-                    <li>Service4</li>
-                    <li>Service5</li>
-                </ul>
-                <ul>
-                    <li>
-                        <h2>Contact</h2>
-                    </li>
-                    <li>
-                        <a href="/contact">
-                            {{client.address.lineOne}}<br>
-                            {{client.address.lineTwo}}<br>
-                            {{client.address.city}}
-                            {{client.address.state}}
-                            {{client.address.zip}}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tel:{{client.phoneForTel}}">
-                            T:
-                            {{client.phoneFormatted}}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:{{client.email}}">Click to Email</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+<footer>
+  <img
+    aria-hidden="true"
+    class="footer-img light-mode-svg"
+    src="https://d33wubrfki0l68.cloudfront.net/c272e13f11fec5e8a82b6342bc194b3eb74b5b72/7cf10/images/footer-swoosh.svg"
+    alt=""
+  />
+  <img
+    aria-hidden="true"
+    class="footer-img dark-mode-svg"
+    src="https://d33wubrfki0l68.cloudfront.net/3b756ae30ef51ccd8564c2978ea8a5a70f1931f8/95db7/images/footer-swoosh-dark.svg"
+    alt=""
+  />
+  <div class="container">
+    <div class="flex-group">
+      <div class="footer-item image-box">
+        <img
+          class="footer-logo mobile-display"
+          src="/assets/images/cwd-black.png"
+          alt="oak harbor web designs logo"
+          height="50"
+        />
+        <img
+          class="footer-logo desktop-display"
+          src="/assets/images/cwd-black.png"
+          alt="oak harbor web designs logo"
+          height="50"
+        />
+        <a href="mailto:jake@cactuswebdesign.com">jake@cactuswebdesign.com</a>
+        <a href="tel:219-576-2539">(219) 576-2539</a>
+      </div>
+      <div class="footer-item">
+        <h2>Navigation</h2>
+        <div aria-hidden="true" class="footer-line"></div>
+        <a class="link" href="/">Home</a>
+        <a class="link" href="/about">About</a>
+        <a class="link-long" href="/services">Services</a>
+        <a class="link-long" href="/#portfolio">Portfolio</a>
+        <a class="link-long" href="/contact">Contact</a>
+      </div>
+      <div class="footer-item">
+        <h2>Services</h2>
+        <div aria-hidden="true" class="footer-line"></div>
+        <p>Web Design</p>
+        <p>Website Maintenance</p>
+        <p>SEO Services</p>
+        <p>Content Creation</p>
+        <p>Logo Design</p>
+      </div>
     </div>
-
-    <div class="credit">
-        <span>Designed and Hand Coded by</span>
-        <a href="/" target="_blank" rel="noopener">Your Company Name</a>
-        <span class="copyright">
-            Copyright {% year %} - Present</span>
-    </div>
+  </div>
+  <div class="branding">
+    <p>
+      Copyright &copy; {% year %} | Cactus Web Designs | All Rights Reserved
+    </p>
+  </div>
 </footer>

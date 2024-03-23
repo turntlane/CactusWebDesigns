@@ -1,76 +1,198 @@
 ---
-title: 'About'
-description: 'Meta description for the page'
-preloadImg: '/assets/images/cabinets2.jpg'
-permalink: 'about/'
+title: "About"
+description: "Meta description for the page"
+preloadImg: "/assets/images/cabinets2.jpg"
+permalink: "about/"
 eleventyNavigation:
-    key: About Us
-    order: 200
+  key: About Us
+  order: 200
 ---
 
-{% extends "layouts/base.html" %}
+{% extends "layouts/base.html" %} {% block head %}
+<link rel="stylesheet" href="/assets/css/about.css" />
+{% endblock %} {% block body %}
+<!-- ============================================ -->
+<!--                    LANDING                   -->
+<!-- ============================================ -->
 
-{% block head %}
-    <link rel="stylesheet" href="/assets/css/about.css">
-{% endblock %}
+<section id="page-header">
+  <h1>About Us</h1>
+</section>
+<!-- <section id="int-hero">
+  <h1 id="home-h">About Us</h1>
+  <picture>
+    <source
+      media="(max-width: 600px)"
+      srcset="/assets/images/cabinets2-m.jpg"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="/assets/images/about-header.webp"
+    />
+    <img
+      aria-hidden="true"
+      decoding="async"
+      src="/assets/images/cabinets2.jpg"
+      alt="kitchen cabinets"
+      loading="eager"
+      width="2500"
+      height="1667"
+    />
+  </picture>
+</section> -->
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
 
-{% block body %}
-    <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
+<section id="sbs-1278">
+  <div class="cs-container">
+    <picture class="cs-picture">
+      <!--Mobile Image-->
+      <source
+        media="(max-width: 600px)"
+        srcset="
+          https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/sbs-construction.jpg
+        "
+      />
+      <!--Tablet and above Image-->
+      <source
+        media="(min-width: 601px)"
+        srcset="../assets/images/headshot.png"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/sbs-construction.jpg"
+        alt="construction"
+        width="738"
+        height="598"
+      />
+    </picture>
+    <div class="cs-content">
+      <div class="cs-flex">
+        <span class="cs-topper">Cactus Web Designs</span>
+        <h2 class="cs-title">Making Your Small Business Compete</h2>
+      </div>
+      <p class="cs-text">
+        My name is Jake, I am the owner and sole developer at Cactus Web
+        Designs. As a former collegiate athlete, I know what it takes to
+        compete. I know what it takes to put countless hours of hard work into
+        building something you are proud of. Over the course of more than 5
+        years I have perfected what it takes to hand code websites the right
+        way.
+        <br />
+        <br />
+        I realized many small businesses can't afford to shell out thousands of
+        dollars at once for a new website. Plus, the ones who do often end up
+        regretting it because they get stuck with awful, outdated websites. It's
+        a tough spot to be in – either you can't afford a decent website, or you
+        don't know who to trust to actually deliver a good one. So, I changed up
+        how I do business to help them out. That led me to offer a plan where
+        businesses pay nothing upfront and just $150 a month. It's a way for
+        small businesses to get a website they need without breaking the bank.
+      </p>
+      <a href="" class="cs-button-solid">Learn More</a>
+    </div>
+  </div>
+  <picture class="cs-background">
+    <!--Mobile Image-->
+    <source
+      media="(max-width: 600px)"
+      srcset="
+        https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/white-waves-m.svg
+      "
+    />
+    <!--Tablet and above Image-->
+    <source
+      media="(min-width: 601px)"
+      srcset="
+        https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/white-waves.svg
+      "
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/white-waves.svg"
+      alt="waves"
+      width="960"
+      height="839"
+    />
+  </picture>
+</section>
 
-    <section id="int-hero">
-        <h1 id="home-h">About Us</h1>
-        <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+<!-- ============================================ -->
+<!--                 Why Choose                   -->
+<!-- ============================================ -->
+
+<section id="why-choose-12">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Prioritizing Quality</span>
+      <h2 class="cs-title">Why Choose Us?</h2>
+      <p class="cs-text">
+        We focus on understanding what each business uniquely needs and tailor
+        our content accordingly. Our process is hands-on, working closely with
+        you to ensure you're completely satisfied with your website, rather than
+        just settling for it.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/sheild.svg"
+            alt="heart icon"
+            width="42"
+            height="42"
+            aria-hidden="true"
+          />
         </picture>
-
-    </section>
-
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
-
-    <section id="sbs">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="cabinets" loading="lazy" width="400" height="563">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="house" loading="lazy" width="400" height="563">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About Company Title</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <div class="cs-flex-group">
-                    <p class="cs-flex-p">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </p>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img class="cs-quote-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg" alt="gavel" width="136" height="77">
-                </div>
-                <a href="/projects" class="cs-button-solid">Our Projects</a>
-            </div>
-        </div>
-    </section>
-
-    {% include 'components/cta.html' %}
-
-{% endblock %}
+        <h3 class="cs-h3">Custom Content Only</h3>
+        <p class="cs-item-text">
+          We create original and captivating content specifically for your
+          company, because we believe every business is unique!
+        </p>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/toolbox.svg"
+            alt="toolbox icon"
+            width="42"
+            height="42"
+            aria-hidden="true"
+          />
+        </picture>
+        <h3 class="cs-h3">Outstanding Customer Service</h3>
+        <p class="cs-item-text">
+          Forget automated replies — when you call for help, the lead developer
+          picks up directly.
+        </p>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/ribbon.svg"
+            alt="ribbon icon"
+            width="32"
+            height="42"
+            aria-hidden="true"
+          />
+        </picture>
+        <h3 class="cs-h3">Flexible Design Options</h3>
+        <p class="cs-item-text">
+          We'll adjust the design to suit your tastes. Everything is
+          customizable!
+        </p>
+      </li>
+    </ul>
+    <a href="" class="cs-button-solid">Our Services</a>
+  </div>
+</section>
+{% include 'components/cta.html' %} {% endblock %}

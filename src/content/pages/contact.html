@@ -1,95 +1,194 @@
 ---
-title: 'Contact'
-description: 'Meta description for the page'
-preloadImg: '/assets/images/cabinets2.jpg'
-permalink: 'contact/'
+title: "Contact"
+description: "Meta description for the page"
+preloadImg: "/assets/images/cabinets2.jpg"
+permalink: "contact/"
 ---
 
-{% extends "layouts/base.html" %}
+{% extends "layouts/base.html" %} {% block head %}
+<link rel="stylesheet" href="/assets/css/contact.css" />
+<link rel="stylesheet" href="/assets/css/local.css" />
+<link rel="stylesheet" href="/assets/css/critical.css" />
+{% endblock %} {% block body %}
 
-{% block head %}
-    <link rel="stylesheet" href="/assets/css/contact.css">
-{% endblock %}
+<!-- ============================================ -->
+<!--                    LANDING                   -->
+<!-- ============================================ -->
 
-{% block body %}
+<section id="page-header">
+  <h1>Contact</h1>
+</section>
 
-    <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--                   Contact                    -->
+<!-- ============================================ -->
 
-    <section id="int-hero">
-        <h1 id="home-h">Contact Us</h1>
-        <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+<section id="contact-1271">
+  <div class="cs-container">
+    <div class="cs-form-group">
+      <h3 class="cs-h3">
+        <picture class="cs-picture">
+          <img
+            loading="lazy"
+            decoding="async"
+            src="../../assets/svgs/calendar.svg"
+            alt="clipboard"
+            width="32"
+            height="32"
+          />
         </picture>
-    </section>
+        We are thrilled to hear from you and learn about your project needs.
+      </h3>
+      <!--Form-->
+      <form
+        class="cs-form"
+        id="cs-form-1271"
+        name="Contact Form"
+        method="post"
+        data-netlify="true"
+      >
+        <label class="cs-label">
+          Name
+          <input
+            class="cs-input"
+            required
+            type="text"
+            id="name-1271"
+            name="name"
+            placeholder="Name"
+          />
+        </label>
+        <label class="cs-label cs-email">
+          Email
+          <input
+            class="cs-input"
+            required
+            type="email"
+            id="email-1271"
+            name="email"
+            placeholder="Email"
+          />
+        </label>
+        <label class="cs-label cs-phone">
+          Phone
+          <input
+            class="cs-input"
+            required
+            type="phone"
+            id="phone-1271"
+            name="phone"
+            placeholder="Phone"
+          />
+        </label>
+        <label class="cs-label">
+          Message
+          <textarea
+            class="cs-input cs-textarea"
+            required
+            name="Message"
+            id="message-1271"
+            placeholder="Write message..."
+          ></textarea>
+        </label>
+        <button class="button-solid cs-submit" type="submit">
+          Make an Appointment
+        </button>
+      </form>
+    </div>
+    <div class="cs-wrapper">
+      <div class="cs-content">
+        <span class="cs-topper">Contact us</span>
+        <h2 class="cs-title">Contact Us for Your Custom Website Needs</h2>
+        <!-- <p class="cs-text">
+          These "Micro Stitches" are to be placed inside the .cs-content group
+          of Side By Side Stitches. Typically after the .cs-title or .cs-text.
+          They are used to add more design flair to a Stitch as well as convey
+          more information in a different way.
+        </p> -->
+        <!--                   
+    These "Micro Stitches" are to be placed inside the .cs-content group of Side By Side Stitches.  Typically after the .cs-title or .cs-text. They are used to add more design flair to a Stitch as well as convey more information in a different way.
+-->
 
-    <!-- ============================================ -->
-    <!--                Contact Form                  -->
-    <!-- ============================================ -->
+        <ul id="list-823" class="cs-ul">
+          <li class="cs-li">
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/sheild.svg"
+              loading="lazy"
+              decoding="async"
+              alt="icon"
+              width="40"
+              height="40"
+            />
+            100% hand coded, we stay away from Wordpress, frameworks and
+            pagebuilders.
+          </li>
+          <li class="cs-li">
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              src="../../assets/svgs/pen.svg"
+              loading="lazy"
+              decoding="async"
+              alt="icon"
+              width="40"
+              height="40"
+            />
+            Our designs are fully customizable. No matter what your taste, we
+            make it happen!
+          </li>
 
-    <section id="cs-contact">
-        <div class="cs-container">
-            <form id="cs-form" name="Contact Form" method="post">
-                <div class="cs-content">
-                    <span class="cs-topper">Contact</span>
-                    <h2 class="cs-title">Get in Touch</h2>
-                    <p class="cs-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus elementum ullamcorper ipsum porttitor aliquam. Id magna urna ultrices odio pulvinar. Sed ut.
-                    </p>
-                </div>
-                <label>
-                    Name
-                    <input required type="text" id="name" name="name" placeholder="Name">
-                </label>
-                <label>
-                    Email
-                    <input required type="text" id="email" name="email" placeholder="Email">
-                </label>
-                <label>
-                    Phone
-                    <input required type="text" id="phone" name="phone" placeholder="Phone">
-                </label>
-                <label>
-                    How Did You Find Us
-                    <input type="text" id="find" name="find-us" placeholder="How did you find us?">
-                </label>
-                <label class="cs-label-message">
-                    Message
-                    <textarea required name="Message" id="message" placeholder="Write message..."></textarea>
-                </label>
-                <button class="cs-button-solid" type="submit">Submit Message</button>
-            </form>
-            <div class="cs-right-section">
-                <!--Email-->
-                <span class="cs-header">Email</span>
-                <a class="cs-link" href="mailto:{{client.email}}">{{client.email}}</a>
-                <!--Phone-->
-                <span class="cs-header">Phone</span>
-                <a class="cs-link" href="tel:{{client.phoneForTel}}">{{client.phoneFormatted}}</a>
-                <!--Address-->
-                <span class="cs-header">Address</span>
-                <a class="cs-link" href="{{client.address.mapLink}}">
-                    {{client.address.lineOne}},
-                    <br />
-                    {{client.address.lineTwo}},
-                    <br />
-                    <span class="cs-block">
-                        {{client.address.city}}
-                        {{client.address.state}}
-                        {{client.address.zip}}
-                    </span>
-                </a>
+          <li class="cs-li">
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              src="../../assets/svgs/phone2.svg"
+              loading="lazy"
+              decoding="async"
+              alt="icon"
+              width="40"
+              height="40"
+            />
+            Help is one call away. When you call, the lead developer always
+            answers.
+          </li>
+        </ul>
 
-                <!-- Background Image-->
-                <picture class="cs-bg-picture">
-                    <source media="(min-width: 601px)" srcset="/assets/images/skyscraper.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/skyscraper.jpg" alt="building" loading="lazy" width="2500" height="1667">
-                </picture>
+        <!-- <p class="cs-text">
+          Fill out our construction contact form and let us know about your
+          project needs. Our team of experts will get back to you within 24-48
+          hours to discuss your project details and provide you with a
+          customized quote.
+        </p> -->
+      </div>
+    </div>
+  </div>
 
-            </div>
-        </div>
-    </section>
+  <picture class="cs-background">
+    <!--Mobile Image-->
+    <source
+      media="(max-width: 600px)"
+      srcset="
+        https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/white-waves-m.svg
+      "
+    />
+    <!--Tablet and above Image-->
+    <source
+      media="(min-width: 601px)"
+      srcset="
+        https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/white-waves.svg
+      "
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/white-waves.svg"
+      alt="waves"
+      width="960"
+      height="839"
+    />
+  </picture>
+</section>
+
 {% endblock %}

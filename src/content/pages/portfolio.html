@@ -1,0 +1,85 @@
+---
+title: "Portfolio"
+description: "Meta description for the page"
+preloadImg: "/assets/images/cabinets2.jpg"
+permalink: "portfolio/"
+eleventyNavigation:
+  key: Portfolio
+  order: 400
+---
+
+{% extends "layouts/base.html" %} {% block head %}
+<link rel="stylesheet" href="/assets/css/reviews.css" />
+{% endblock %} {% block body %}
+
+<!-- ============================================ -->
+<!--                    LANDING                   -->
+<!-- ============================================ -->
+
+<section id="page-header">
+  <h1>Portfolio</h1>
+</section>
+
+<!-- ============================================ -->
+<!--                   PORTFOLIO                  -->
+<!-- ============================================ -->
+
+<section id="portfolio" class="section">
+  <div id="portfolio2" class="container">
+    <h2><span>OUR </span> PORTFOLIO</h2>
+    <!-- <div aria-hidden="true" class="graphic-group">
+      <div class="dash"></div>
+      <img
+        src="https://d33wubrfki0l68.cloudfront.net/e9d9895c8751f62725f1b49e32d0f3f62682d195/c6364/images/portfolio.svg"
+        alt=""
+      />
+      <div class="dash"></div>
+    </div> -->
+    <div class="example-group">
+      <div class="example">
+        <img
+          srcset="../../assets/images/portfolio-hair2.png"
+          sizes="(max-width: 600px) 480px, 800px"
+          src="../../assets/images/portfolio-hair2.png"
+          width="300px"
+          alt="sew strong website mock up"
+        />
+        <h3>RA Hair Designs</h3>
+        <h4>Phoenix, AZ</h4>
+        <p>
+          RA Hair Designs is a boutique hair salon in Phoenix, Arizona. Rebecca
+          has been been a stlylist for over 30 years.
+        </p>
+        <button
+          class="button-solid"
+          onclick="location.href='https://www.rahairdesigns.com/'"
+          type="button"
+        >
+          VISIT RA HAIR DESIGNS
+        </button>
+      </div>
+      <div class="example">
+        <img
+          src="../../assets/images/portfolio-guitar2.png"
+          width="300px"
+          alt="hillbilly gyros website mock up"
+        />
+        <h3>J. Alexander Guitars</h3>
+        <h4>Phoenix, AZ</h4>
+        <p>
+          J. Alexander Guitars is a custom guitar and lutherie shop in Phoenix,
+          Arizona. Handcrafting one of a kind guitars.
+        </p>
+        <button
+          class="button-solid"
+          onclick="location.href='https://jalexanderguitars.com/'"
+          type="button"
+        >
+          VISIT J. ALEXANDER GUITARS
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include 'components/cta.html' %} {% endblock %}

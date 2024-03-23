@@ -1,297 +1,173 @@
-/* STYLES FOR ABOVE THE FOLD */
 /*-- -------------------------- -->
-<---           Hero             -->
+<---          Contact           -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
-@media only screen and (min-width: 0em) {
-  #hero {
-    font-family: "Roboto", "Arial", sans-serif;
-    /* Centers button */
-    text-align: center;
-    /* changes on tablet */
-    padding: 0 1rem;
-    padding-bottom: 6.25rem;
+@media only screen and (min-width: 0rem) {
+  #contact-1184 {
+    padding: var(--sectionPadding);
     position: relative;
     z-index: 1;
-    /* prevents overflow from the lines extending past the screen width */
-    overflow: hidden;
   }
-  #hero .cs-picture {
-    /* Background Image */
+  #contact-1184 .cs-container {
     width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -2;
+    /* changes to 100% at tablet */
+    max-width: 36.5rem;
+    background-color: #fff;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    /* 48px - 80px */
+    gap: clamp(3rem, 6vw, 5rem);
   }
-  #hero .cs-picture:before {
-    /* Black Color Overlay */
-    content: "";
+  #contact-1184 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
     width: 100%;
-    height: 100%;
-    background: #000;
-    opacity: 0.7;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: flex;
+    background-color: transparent;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+    border-radius: 0.25rem;
+  }
+  #contact-1184 .cs-title {
+    margin: 0 0 2rem 0;
+  }
+  #contact-1184 .cs-form {
+    width: 100%;
+    /* 24px - 48px top and bottom */
+    /* 24px - 32px left and right */
+    padding: clamp(1.5rem, 4vw, 3rem) clamp(1.5rem, 3vw, 2rem);
+    /* prevents flexbox from affecting height and width */
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    -webkit-box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.09);
+    box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.09);
+  }
+  #contact-1184 .cs-label {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    width: 100%;
+    color: var(--headerColor);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  #contact-1184 .cs-input {
+    font-size: 1rem;
+    width: 100%;
+    height: 3.5rem;
+    padding: 0;
+    padding-left: 1.5rem;
+    color: var(--headerColor);
+    border: none;
+    /* prevents padding from adding to height and width */
+    box-sizing: border-box;
+  }
+  #contact-1184 .cs-input::placeholder {
+    color: #7d799c;
+    opacity: 0.6;
+  }
+  #contact-1184 .cs-textarea {
+    min-height: 7.5rem;
+    padding-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-family: inherit;
+    background-color: #fff;
+  }
+  #contact-1184 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    border: none;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
     z-index: 1;
-    /* prevents the cursor from interacting with it */
-    pointer-events: none;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    transition: color 0.3s;
   }
-  #hero .cs-picture img {
+  #contact-1184 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+  }
+  #contact-1184 .cs-button-solid:hover {
+    color: #fff;
+  }
+  #contact-1184 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #contact-1184 .cs-submit {
+    min-width: 17.6875rem;
+    border-radius: 3px;
+  }
+  #contact-1184 .cs-submit:hover {
+    cursor: pointer;
+  }
+  #contact-1184 .cs-background {
+    background-color: #fff;
+    width: 100%;
+    height: 80vw;
+    max-height: 28.125rem;
+    display: block;
+    position: relative;
+  }
+  #contact-1184 .cs-background img {
     width: 100%;
     height: 100%;
-    /* Makes image act like a background-image */
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
   }
-  #hero .cs-container {
-    width: 100%;
-    max-width: 80em;
-    margin: auto;
-    /* we put the padding top and bottom on the container instead of #Hero so the pseudo element lines go to the top and bottom of the section */
-    /* 144px - 280px - leaving extra space for the navigation */
-    /* changes on tablet */
-    padding: clamp(9em, 25.95vw, 17.5em) 0;
-    position: relative;
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 48rem) {
+  #contact-1184 {
+    padding-left: 0;
+    padding-right: 0;
   }
-  #hero .cs-container:before {
-    /* Left Line */
-    content: "";
-    width: 1px;
-    height: 100%;
-    background: -moz-linear-gradient(top, rgba(250, 251, 252, 0.5) 0%, rgba(250, 251, 252, 0) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(250, 251, 252, 0.5) 0%, rgba(250, 251, 252, 0) 100%); /* Chrome10-25,Safari5.1-6 */
-    opacity: 1;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  #hero .cs-flex-group {
-    width: 80vw;
-    /* 464px - 562px */
-    max-width: clamp(29em, 60vw, 35.125em);
-    margin: auto;
-    /* 60px - 220px */
-    margin-bottom: clamp(3.75em, 15.5vw, 13.75em);
-    box-sizing: border-box;
-    display: flex;
+  #contact-1184 .cs-container {
+    max-width: 100%;
+    flex-direction: row;
+    align-items: stretch;
     justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    /* 16px - 52px */
+    gap: clamp(1rem, 2vw, 3.25rem);
   }
-  #hero .cs-topper {
-    text-align: center;
-    margin-bottom: 1rem;
-    color: var(--primary);
+  #contact-1184 .cs-content {
+    width: 45%;
+    max-width: 33.875rem;
+    flex: none;
   }
-  #hero .cs-title {
-    text-align: center;
-    width: 100%;
-    color: var(--bodyTextColorWhite);
-  }
-  #hero .cs-text {
-    text-align: center;
-    /* 32px - 40px */
-    margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
-    /* 40px - 48px */
-    margin-bottom: clamp(2.5rem, 4vw, 3rem);
-    color: var(--bodyTextColorWhite);
-  }
-  #hero .cs-button-solid {
-    line-height: clamp(2.875em, 5.5vw, 3.5em);
-    height: initial;
-    margin-bottom: 1rem;
-  }
-  #hero .cs-button-transparent {
-    font-size: 1rem;
-    font-weight: 700;
-    /* 46px - 56px */
-    line-height: clamp(2.875em, 5.5vw, 3.5em);
-    text-decoration: none;
-    width: 11.25rem;
-    /* 46px - 56px */
-    height: clamp(2.875em, 5.5vw, 3.5em);
-    margin: 0 0.5rem;
-    box-sizing: border-box;
-    padding: 0;
-    color: #fff;
-    background-color: transparent;
-    border: 1px solid var(--bodyTextColorWhite);
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-  }
-  #hero .cs-button-transparent:before {
-    content: "";
-    background: #000;
-    opacity: 1;
-    display: block;
-    position: absolute;
-    /* so it sits on top of the border */
-    top: -1px;
-    right: -1px;
-    bottom: -1px;
-    left: -1px;
-    z-index: -1;
-    /* this is what creates the grow affect on hover */
-    transform: scaleX(0);
-    transition: transform 0.3s;
-    transform-origin: left;
-  }
-  #hero .cs-button-transparent:hover:before {
-    transform: scaleX(1);
-  }
-  #hero .cs-button-transparent .cs-img {
-    margin-right: 0.75rem;
-    display: block;
-  }
-}
-/* Tablet - 768px */
-@media only screen and (min-width: 48em) {
-  #hero {
-    /* 32px - 40px */
-    padding: 0 clamp(2em, 5vw, 2.5em);
-  }
-  #hero .cs-container {
-    padding: clamp(7em, 27.95vw, 17.5em) 0 clamp(9em, 30.95vw, 23.5em) 0;
-  }
-  #hero .cs-container:after {
-    /* Right Line */
-    content: "";
-    width: 1px;
-    height: 100%;
-    background: -moz-linear-gradient(top, rgba(250, 251, 252, 0) 0%, rgba(250, 251, 252, 0.5) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(250, 251, 252, 0) 0%, rgba(250, 251, 252, 0.5) 100%); /* Chrome10-25,Safari5.1-6 */
-    opacity: 1;
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-  #hero .cs-button-solid {
-    margin-right: 1.25rem;
-    margin-bottom: 0;
-  }
-}
-/* Desktop Parallax Effect - 1300px */
-@media only screen and (min-width: 81.25em) {
-  #hero {
-    background: url("/assets/images/landing.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    /* creates parallax effect on background image */
-    background-attachment: fixed;
-  }
-}
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode #hero .cs-background:before {
-    opacity: 0.8;
-  }
-}
-/*-- -------------------------- -->
-<---          Services          -->
-<--- -------------------------- -*/
-/* Mobile */
-@media only screen and (min-width: 0em) {
-  .services {
-    width: 90%;
-    max-width: 82.5em;
-    margin: auto;
-    margin-top: -10.4375em;
-    margin-bottom: 3.125em;
-    padding: 3.125em 1.25em;
-    background: #fff;
-    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
-    border-top: 0.375em solid var(--primary);
-    border-radius: 0.3125em;
-    position: relative;
-    z-index: 100;
-  }
-  .services .card {
-    width: 100%;
-    max-width: 22.3125em;
-    margin: auto;
-    margin-bottom: 3.125em;
-    display: block;
-  }
-  .services .card:last-of-type {
-    margin-bottom: 0;
-  }
-  .services .card picture {
-    width: 5.5em;
-    height: 5.5em;
-    margin: auto;
-    margin-bottom: 1.4375em;
-    background: var(--primary);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .services .card picture img {
-    width: 3em;
-    height: 3em;
-  }
-  .services .card h2 {
-    font-size: 2em;
-    font-weight: 700;
-    line-height: 1.35em;
-    text-align: center;
-    margin-bottom: 0.65em;
-    color: #1a1a1a;
-  }
-  .services .card p {
-    line-height: 1.3333333333em;
-    text-align: center;
-    width: 100%;
-    opacity: 0.7;
-  }
-}
-/* Inbetween */
-@media only screen and (min-width: 768px) {
-  .services {
-    font-size: min(1.8vw, 1em);
-    width: 98%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  .services .card {
-    max-width: 20.3125em;
-    margin: 0;
-  }
-}
-/* Large Desktop */
-@media only screen and (min-width: 1300px) {
-  .services {
-    padding: 3.125em 5em;
-  }
-  .services .card {
-    max-width: 22.3125em;
-  }
-}
-/* Dark mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode #services {
-    background: var(--medium);
-  }
-  body.dark-mode #services picture {
-    background: var(--primaryDark);
-  }
-  body.dark-mode #services h2 {
-    font-weight: bold;
-    color: #fff;
+  #contact-1184 .cs-background {
+    height: auto;
+    max-height: 100%;
   }
 }
 
