@@ -283,7 +283,7 @@
       margin: auto;
       margin-bottom: calc(32 / 16 * 1rem);
       border-radius: 50%;
-      background-color: var(--primary);
+      background: var(--bgGradient);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -325,7 +325,7 @@
       color: #fff;
       min-width: calc(150 / 16 * 1rem);
       padding: 0 calc(24 / 16 * 1rem);
-      background-color: var(--primary);
+      background: var(--bgGradient);
       border-radius: calc(4 / 16 * 1rem);
       display: inline-block;
       position: relative;
@@ -578,4 +578,47 @@
   100% {
     background-position: 0% 50%;
   }
+}
+
+.paper-airplane-path {
+  display: block;
+  margin-top: 100px;
+}
+
+.line-box {
+  height: 100px;
+  width: 80%;
+  border-left: 2px dashed rgba(100, 100, 100, 0.4);
+  border-bottom: 2px dashed rgba(100, 100, 100, 0.4);
+  position: relative;
+  margin: auto;
+}
+
+.line-box:after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  border-right: 2px dashed rgba(100, 100, 100, 0.4);
+  right: 0;
+  bottom: -100px;
+  width: 10px;
+}
+
+.svg-div {
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+  position: absolute;
+  width: 50px;
+  height: auto;
+  right: -20px;
+  bottom: -170px;
+}
+
+.paper-airplane-path svg {
+  width: 50px;
+  height: auto;
+  -webkit-transform: rotate(100deg);
+  -ms-transform: rotate(100deg);
+  transform: rotate(100deg);
 }

@@ -1,7 +1,7 @@
 ---
-title: "About"
-description: "Meta description for the page"
-preloadImg: "/assets/images/cabinets2.jpg"
+title: "About Us"
+description: "Learn why Cactus Web Designs is the right fit to help your small business create the perfect website for you"
+preloadImg: "/assets/images/headshot.png"
 permalink: "about/"
 eleventyNavigation:
   key: About Us
@@ -18,28 +18,6 @@ eleventyNavigation:
 <section id="page-header">
   <h1>About Us</h1>
 </section>
-<!-- <section id="int-hero">
-  <h1 id="home-h">About Us</h1>
-  <picture>
-    <source
-      media="(max-width: 600px)"
-      srcset="/assets/images/cabinets2-m.jpg"
-    />
-    <source
-      media="(min-width: 601px)"
-      srcset="/assets/images/about-header.webp"
-    />
-    <img
-      aria-hidden="true"
-      decoding="async"
-      src="/assets/images/cabinets2.jpg"
-      alt="kitchen cabinets"
-      loading="eager"
-      width="2500"
-      height="1667"
-    />
-  </picture>
-</section> -->
 <!-- ============================================ -->
 <!--                 Side By Side                 -->
 <!-- ============================================ -->
@@ -50,9 +28,7 @@ eleventyNavigation:
       <!--Mobile Image-->
       <source
         media="(max-width: 600px)"
-        srcset="
-          https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/sbs-construction.jpg
-        "
+        srcset="../assets/images/headshot-mobile.png"
       />
       <!--Tablet and above Image-->
       <source
@@ -62,8 +38,8 @@ eleventyNavigation:
       <img
         loading="lazy"
         decoding="async"
-        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/sbs-construction.jpg"
-        alt="construction"
+        src="../assets/images/headshot.png"
+        alt="headshot"
         width="738"
         height="598"
       />
@@ -91,7 +67,7 @@ eleventyNavigation:
         businesses pay nothing upfront and just $150 a month. It's a way for
         small businesses to get a website they need without breaking the bank.
       </p>
-      <a href="" class="cs-button-solid">Learn More</a>
+      <a href="/contact" class="button-solid">Contact</a>
     </div>
   </div>
   <picture class="cs-background">
@@ -192,7 +168,7 @@ eleventyNavigation:
         </p>
       </li>
     </ul>
-    <a href="" class="cs-button-solid">Our Services</a>
+    <a href="/services" class="button-solid">Our Services</a>
   </div>
 </section>
 {% include 'components/cta.html' %} {% endblock %}

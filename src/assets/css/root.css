@@ -5,14 +5,28 @@
 /* CodeStitch Root and Helpers */
 @media only screen and (min-width: 0em) {
   :root {
-    --primary: #2c4900;
+    --primary: #ffd100;
     --primaryLight: #ffeb54;
+    --primaryLightBG: #fff1b3;
+    --bgGradientTop: #ffd000;
+    --bgGradientBottom: #ffe46b;
     --secondary: #d6d6d6;
     --secondaryLight: #d6d6d6;
     --headerColor: #333533;
     --buttonHoverBackground: #333533;
     --bodyTextColor: #202020;
     --bodyTextColorWhite: #fafbfc;
+    --bgGradient: linear-gradient(
+      to bottom right,
+      var(--bgGradientTop),
+      var(--bgGradientBottom)
+    );
+    --bgGradient2: linear-gradient(
+      71deg,
+      var(--primary),
+      var(--bodyTextColor),
+      var(--primary)
+    );
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */
@@ -95,7 +109,6 @@
     width: 100%;
     max-width: 40.625rem;
     margin: 0;
-    color: var(--bodyTextColor);
   }
   .cs-button-solid {
     font-size: 1rem;
@@ -107,7 +120,7 @@
     width: auto;
     padding: 0 1.875rem;
     color: #000;
-    background-color: var(--primary);
+    background: var(--bgGradient);
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -1358,18 +1371,6 @@ button:hover {
   cursor: pointer;
 }
 
-:root {
-  --primary: #ffd100;
-  --primaryLight: #ffeb54;
-  --primaryLightBG: #fff1b3;
-  --secondary: #d6d6d6;
-  --secondaryLight: #d6d6d6;
-  --headerColor: #333533;
-  --buttonHoverBackground: #333533;
-  --bodyTextColor: #202020;
-  --bodyTextColorWhite: #fafbfc;
-}
-
 .section {
   padding-top: 35px !important;
   padding-bottom: 35px !important;
@@ -1445,26 +1446,20 @@ h2 span {
 
 .button-solid {
   color: var(--bodyTextColor);
-  background: var(--primary);
+  background: var(--bgGradient);
   border-radius: 3px;
-  width: auto;
   height: auto;
   font-weight: 700;
   text-decoration: none;
   display: inline-block;
   box-sizing: border-box;
   white-space: nowrap;
-  width: auto;
   margin: 10px 0;
   padding: 15px 30px;
   text-align: center;
   font-size: 0.75em;
   width: auto;
-  -webkit-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-  transition: 0.3s ease;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   border: 1px solid transparent;
 }
 
@@ -2220,7 +2215,7 @@ h2 span {
     border-right: none;
     color: var(--buttonHoverBackground);
     opacity: 1 !important;
-    border-bottom: 3px solid var(--primary);
+    border-bottom: 3px solid var(--bodyTextColor);
     color: var(--buttonHoverBackground) !important;
   }
   #bottom .container {
@@ -3771,10 +3766,30 @@ input[type=email] {
 }
 
 .list-item h3:before {
-  content: url(https://d33wubrfki0l68.cloudfront.net/568adbb913cf2cbcc902fa785d82c5f5523ed2b4/330b7/images/check.svg);
+  content: url(../../assets/svgs/check-mark2.svg);
   position: absolute;
   left: -40px;
   height: 30px;
+  width: 30px;
+}
+
+.list-item2 p {
+  font-size: 16px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.list-item2 p:before {
+  content: url(../../assets/svgs/check-mark2.svg);
+  position: absolute;
+  left: -40px;
+  height: 30px;
+  width: 30px;
 }
 
 #portolio {
@@ -4543,7 +4558,7 @@ input[type=email] {
   .who-topper p {
     width: 600px;
     margin: auto;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
   #blog {
     padding: 20px 0 70px;

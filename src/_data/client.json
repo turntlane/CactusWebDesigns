@@ -1,15 +1,7 @@
 {
-    "name": "Code Stitch Web Designs",
-    "email": "help@codestitch.app",
-    "phoneForTel": "555-779-4407",
-    "phoneFormatted": "(555) 779-4407",
-    "address": {
-        "lineOne": "First Address Line",
-        "lineTwo": "Second Address Line",
-        "city": "Denver",
-        "state": "CO",
-        "zip": "80206",
-        "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
-    },
-    "domain": "https://www.codestitch.app"
+  "name": "Cactus Web Designs",
+  "email": "jake@cactuswebdesigns.com",
+  "phoneForTel": "480-442-3089",
+  "phoneFormatted": "(480) 442-3089",
+  "domain": "https://www.cactuswebdesigns.com"
 }

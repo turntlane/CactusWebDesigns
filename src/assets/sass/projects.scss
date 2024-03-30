@@ -106,127 +106,160 @@
   }
 }
 
+.paper-airplane-path {
+  display: block;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.line-box {
+  height: 100px;
+  width: 80%;
+  // padding: 10rem 0 10rem 0;
+  border-left: 2px solid rgba(100, 100, 100, 0.4);
+  border-bottom: 2px solid rgba(100, 100, 100, 0.4);
+  position: relative;
+  margin: auto;
+}
+
+.line-box:after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  border-right: 2px solid rgba(100, 100, 100, 0.4);
+  right: 0;
+  bottom: -100px;
+  width: 10px;
+}
+
+.svg-div {
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+  position: absolute;
+  width: 50px;
+  height: auto;
+  right: -28px;
+  bottom: -200px;
+}
+
+.paper-airplane-path svg {
+  width: 50px;
+  height: auto;
+  -webkit-transform: rotate(100deg);
+  -ms-transform: rotate(100deg);
+  transform: rotate(100deg);
+}
+
+#seo .paper-airplane-path {
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+  margin-top: 100px;
+}
+
 /*-- -------------------------- -->
-<---          Contact           -->
+<---   Side By Side Reverse     -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #contact-1184 {
+  #sbsr-1126 {
     padding: var(--sectionPadding);
-    // background-color: #f7f7f7;
+    padding-top: 13rem;
+    padding-bottom: 0;
     position: relative;
     z-index: 1;
 
     .cs-container {
       width: 100%;
-      /* changes to 100% at tablet */
-      max-width: calc(584 / 16 * 1rem);
-      background-color: #fff;
+      /* changes to 1280px at desktop */
+      max-width: calc(550 / 16 * 1rem);
       margin: auto;
       display: flex;
-      justify-content: center;
-      align-items: stretch;
       flex-direction: column;
-      /* 48px - 80px */
-      gap: clamp(3rem, 6vw, 5rem);
+      align-items: center;
+      gap: calc(48 / 16 * 1rem);
     }
 
     .cs-content {
       /* set text align to left if content needs to be left aligned */
-      text-align: center;
+      text-align: left;
       width: 100%;
+      max-width: calc(522 / 16 * 1rem);
       display: flex;
-      background-color: transparent;
       flex-direction: column;
       /* centers content horizontally, set to flex-start to left align */
-      align-items: center;
-      // -webkit-box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.09);
-      // box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.09);
-      border-radius: 0.25rem;
-      // padding: 2rem;
-    }
-
-    .cs-title {
-      margin: 0 0 calc(32 / 16 * 1rem) 0;
-    }
-
-    .cs-form {
-      width: 100%;
-      /* 24px - 48px top and bottom */
-      /* 24px - 32px left and right */
-      padding: clamp(1.5rem, 4vw, 3rem) clamp(1.5rem, 3vw, 2rem);
-      /* prevents flexbox from affecting height and width */
-      box-sizing: border-box;
-      // background-color: #fff;
-      background-color: #f7f7f7;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: calc(12 / 16 * 1rem);
-      -webkit-box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.09);
-      box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.09);
-    }
-
-    .cs-label {
-      /* 14px - 16px */
-      font-size: clamp(0.875rem, 1.5vw, 1rem);
-      width: 100%;
-      color: var(--headerColor);
-      // background-color: #fff;
-      display: flex;
-      flex-direction: column;
-      // justify-content: center;
       align-items: flex-start;
-      gap: calc(4 / 16 * 1rem);
     }
 
-    .cs-input {
-      font-size: calc(16 / 16 * 1rem);
-      width: 100%;
-      // background-color: #fff;
-      height: calc(56 / 16 * 1rem);
-      padding: 0;
-      padding-left: calc(24 / 16 * 1rem);
-      color: var(--headerColor);
-      // background-color: #f7f7f7;
-      border: none;
-      /* prevents padding from adding to height and width */
-      box-sizing: border-box;
-      &::placeholder {
-        color: #7d799c;
-        opacity: 0.6;
+    .cs-topper {
+      color: var(--primary);
+    }
+
+    .cs-text {
+      margin-bottom: calc(16 / 16 * 1rem);
+      &:last-of-type {
+        margin-bottom: calc(32 / 16 * 1rem);
       }
     }
 
-    .cs-textarea {
-      min-height: calc(120 / 16 * 1rem);
-      padding-top: calc(24 / 16 * 1rem);
-      margin-bottom: calc(12 / 16 * 1rem);
-      font-family: inherit;
-      background-color: #fff;
+    .cs-ul {
+      width: 100%;
+      margin: 0 0 calc(32 / 16 * 1rem) 0;
+      padding-left: calc(20 / 16 * 1rem);
+      /* prevents padding from affecting width and height */
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: calc(8 / 16 * 1rem);
+    }
+
+    .cs-li {
+      font-size: var(--bodyFontSize);
+      line-height: 1.5em;
+      list-style: none;
+      text-align: left;
+      width: 100%;
+      max-width: calc(400 / 16 * 1rem);
+      margin: 0;
+      color: var(--bodyTextColor);
+      position: relative;
+
+      &:before {
+        /* bullet */
+        content: "";
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: currentColor;
+        opacity: 1;
+        position: absolute;
+        display: block;
+        top: calc(10 / 16 * 1rem);
+        left: calc(-15 / 16 * 1rem);
+      }
     }
 
     .cs-button-solid {
       font-size: calc(16 / 16 * 1rem);
       /* 46px - 56px */
-      line-height: clamp(2.875em, 5.5vw, 3.5em);
+      line-height: clamp(2.875rem, 5.5vw, 3.5rem);
       text-decoration: none;
       font-weight: 700;
       text-align: center;
       margin: 0;
-      color: #fff;
-      border: none;
-      min-width: calc(150 / 16 * 1rem);
+      color: var(--bodyTextColor);
+      min-width: calc(200 / 16 * 1rem);
       padding: 0 calc(24 / 16 * 1rem);
       background-color: var(--primary);
-      border-radius: calc(4 / 16 * 1rem);
+      border-radius: calc(8 / 16 * 1rem);
       display: inline-block;
       position: relative;
       z-index: 1;
       /* prevents padding from adding to the width */
       box-sizing: border-box;
-      transition: color 0.3s;
 
       &:before {
         content: "";
@@ -238,34 +271,37 @@
         top: 0;
         left: 0;
         z-index: -1;
-        border-radius: calc(4 / 16 * 1rem);
+        border-radius: calc(8 / 16 * 1rem);
         transition: width 0.3s;
       }
 
       &:hover {
-        color: #fff;
         &:before {
           width: 100%;
         }
       }
     }
 
-    .cs-submit {
-      min-width: calc(283 / 16 * 1rem);
-      border-radius: 3px;
-      &:hover {
-        cursor: pointer;
-        color: white;
-      }
+    .cs-image-group {
+      /* scaling entire section down. font-size starts at a min in vw, and stops when that value reaches 1em (16px). Since we want the picture elements to base their font size on the parent and not the root, we use ems for this entire section  */
+      font-size: min(1.9vw, 0.64em);
+      width: calc(657 / 16 * 1em);
+      height: calc(676 / 16 * 1em);
+      /* offset the amount the cs-graphic overflows the container so it stays centerd on mobile and tablet, removed at desktop */
+      margin-right: calc(108 / 16 * 1em);
+      position: relative;
+      z-index: 1;
     }
 
-    .cs-background {
-      background-color: #fff;
-      width: 100%;
-      height: 80vw;
-      max-height: calc(450 / 16 * 1rem);
+    .cs-picture {
+      width: calc(657 / 16 * 1em);
+      height: calc(676 / 16 * 1em);
+      overflow: hidden;
+      border-radius: 50%;
       display: block;
-      position: relative;
+      position: absolute;
+      top: 0;
+      right: 0;
 
       img {
         width: 100%;
@@ -276,33 +312,362 @@
         left: 0;
       }
     }
+
+    .cs-graphic {
+      width: calc(641 / 16 * 1em);
+      height: auto;
+      position: absolute;
+      right: calc(-108 / 16 * 1em);
+      top: 0;
+      z-index: -1;
+    }
   }
 }
 
 /* Desktop - 1024px */
-@media only screen and (min-width: 48rem) {
-  #contact-1184 {
-    padding-left: 0;
-    padding-right: 0;
-
+@media only screen and (min-width: 64rem) {
+  #sbsr-1126 {
     .cs-container {
-      max-width: 100%;
+      max-width: calc(1280 / 16 * 1rem);
       flex-direction: row;
-      align-items: stretch;
-      justify-content: center;
-      /* 16px - 52px */
-      gap: clamp(1rem, 2vw, 3.25rem);
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .cs-image-group {
+      /* reset the scale */
+      font-size: min(1.2vw, 1em);
+      margin: 0;
+      /* sends it to the right in the 2nd position */
+      order: 2;
     }
 
     .cs-content {
       width: 45%;
-      max-width: calc(542 / 16 * 1rem);
+      /* prevent flexbox from squishing it */
       flex: none;
     }
+  }
+}
 
-    .cs-background {
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbs-1125 {
+    padding: var(--sectionPadding);
+    padding-top: 13rem;
+    padding-bottom: 0;
+    position: relative;
+    z-index: 1;
+
+    .cs-container {
+      width: 100%;
+      /* changes to 1280px at desktop */
+      max-width: calc(550 / 16 * 1rem);
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: calc(48 / 16 * 1rem);
+    }
+
+    .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: left;
+      width: 100%;
+      max-width: calc(522 / 16 * 1rem);
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: flex-start;
+    }
+
+    .cs-topper {
+      color: var(--primary);
+    }
+
+    .cs-text {
+      margin-bottom: calc(16 / 16 * 1rem);
+      &:last-of-type {
+        margin-bottom: calc(32 / 16 * 1rem);
+      }
+    }
+
+    .cs-ul {
+      width: 100%;
+      margin: 0 0 calc(32 / 16 * 1rem) 0;
+      padding-left: calc(20 / 16 * 1rem);
+      /* prevents padding from affecting width and height */
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: calc(8 / 16 * 1rem);
+    }
+
+    .cs-li {
+      font-size: var(--bodyFontSize);
+      line-height: 1.5em;
+      list-style: none;
+      text-align: left;
+      width: 100%;
+      max-width: calc(400 / 16 * 1rem);
+      margin: 0;
+      color: var(--bodyTextColor);
+      position: relative;
+
+      &:before {
+        /* bullet */
+        content: "";
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: currentColor;
+        opacity: 1;
+        position: absolute;
+        display: block;
+        top: calc(10 / 16 * 1rem);
+        left: calc(-15 / 16 * 1rem);
+      }
+    }
+
+    .cs-button-solid {
+      font-size: calc(16 / 16 * 1rem);
+      /* 46px - 56px */
+      line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+      text-decoration: none;
+      font-weight: 700;
+      text-align: center;
+      margin: 0;
+      color: var(--bodyTextColor);
+      min-width: calc(200 / 16 * 1rem);
+      padding: 0 calc(24 / 16 * 1rem);
+      background-color: var(--primary);
+      border-radius: calc(8 / 16 * 1rem);
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      /* prevents padding from adding to the width */
+      box-sizing: border-box;
+
+      &:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        background: #000;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: calc(8 / 16 * 1rem);
+        transition: width 0.3s;
+      }
+
+      &:hover {
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+
+    .cs-image-group {
+      /* scaling entire section down. font-size starts at a min in vw, and stops when that value reaches 1em (16px). Since we want the picture elements to base their font size on the parent and not the root, we use ems for this entire section  */
+      font-size: min(1.9vw, 0.64em);
+      width: calc(657 / 16 * 1em);
+      height: calc(676 / 16 * 1em);
+      /* offset the amount the cs-graphic overflows the container so it stays centerd on mobile and tablet, removed at desktop */
+      margin-left: calc(108 / 16 * 1em);
+      position: relative;
+      z-index: 1;
+    }
+
+    .cs-picture {
+      width: calc(657 / 16 * 1em);
+      height: calc(676 / 16 * 1em);
+      overflow: hidden;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .cs-graphic {
+      width: calc(641 / 16 * 1em);
       height: auto;
-      max-height: 100%;
+      position: absolute;
+      left: calc(-108 / 16 * 1em);
+      top: 0;
+      z-index: -1;
     }
   }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #sbs-1125 {
+    .cs-container {
+      max-width: calc(1280 / 16 * 1rem);
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .cs-image-group {
+      /* reset the scale */
+      font-size: min(1.2vw, 1em);
+      margin: 0;
+    }
+
+    .cs-content {
+      width: 45%;
+      /* prevent flexbox from squishing it */
+      flex: none;
+    }
+  }
+}
+
+// .container {
+//   width: 1200px !important;
+//   padding: 0 !important;
+//   padding-top: 35px !important;
+//   margin-right: auto;
+//   margin-left: auto;
+
+//   @media screen and (min-width: 992px) and (max-width: 1439px) {
+//     max-width: 1279px !important;
+//     padding: 0 !important;
+//     margin: 0 80px !important;
+//     width: auto !important;
+//   }
+
+//   @media screen and (max-width: 991px) {
+//     max-width: 959px !important;
+//     margin: 0 16px !important;
+//     padding: 0 !important;
+//     width: auto !important;
+//   }
+// }
+
+.gradient-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px; /* Maintains space between cards */
+  margin-top: 70px;
+}
+
+@media screen and (max-width: 991px) {
+  .gradient-cards {
+    grid-template-columns: 1fr; /* Full width on smaller screens */
+  }
+}
+
+.container-title {
+  text-align: center;
+  padding: 0 !important;
+  margin-bottom: 40px;
+  font-size: 40px;
+  color: var(--bodyTextColor);
+  font-weight: 600;
+  line-height: 60px;
+}
+
+.card {
+  flex: 1 1 calc(50% - 32px); /* Adjusts the card size minus the gap */
+  display: flex;
+  flex-direction: column;
+}
+.container-card {
+  position: relative;
+  background-clip: padding-box;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 25px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 25px 15px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(50% - 32px); /* Adjusts the card size minus the gap */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  border: 1px solid transparent;
+  border-bottom: 5px solid var(--primary);
+  padding: 40px;
+}
+
+.container-card img {
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+  width: 100%; /* makes image width 100% of its parent container */
+  height: auto; /* maintains aspect ratio */
+  max-width: 200px; /* maximum width */
+  max-height: 200px; /* maximum height */
+}
+
+.bg-green-box,
+.bg-white-box,
+.bg-yellow-box,
+.bg-blue-box {
+  position: relative;
+}
+
+.bg-green-box::after,
+.bg-white-box::after,
+.bg-yellow-box::after,
+.bg-blue-box::after {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  content: "";
+  z-index: -1;
+  border-radius: 45px;
+}
+
+// .bg-green-box::after {
+//   background: linear-gradient(71deg, #0d1212, #3da077, #0d1212);
+// }
+
+// .bg-white-box::after {
+//   background: linear-gradient(71deg, #121013, #b0afb0, #121013);
+// }
+
+// .bg-yellow-box::after {
+//   background: linear-gradient(71deg, #110e0e, #afa220, #110e0e);
+// }
+
+// .bg-blue-box::after {
+//   background: linear-gradient(71deg, #0c0a0e, #5f6fad, #0c0a0e);
+// }
+
+.card-title {
+  font-weight: 600;
+  color: var(--bodyTextColor);
+  letter-spacing: -0.02em;
+  line-height: 40px;
+  font-style: normal;
+  font-size: 28px;
+  padding-bottom: 8px;
+  text-align: left;
+  align-self: flex-start;
+}
+
+.card-description {
+  line-height: 32px;
+  font-size: 16px;
+  max-width: 470px;
 }

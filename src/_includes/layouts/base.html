@@ -16,36 +16,44 @@
     <meta property="og:description" content="{{ description }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ client.domain }}{{ page.url }}" />
-    <meta property="og:image" content="/assets/images/logo-small.png" />
+    <meta
+      property="og:image"
+      content="/assets/images/cwd-black-green-cactus.png"
+    />
     <meta
       property="og:image:secure_url"
-      content="/assets/images/logo-small.png"
+      content="/assets/images/cwd-black-green-cactus.png"
     />
 
     <!--Favicons-->
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/assets/favicons/apple-touch-icon.png"
+      href="../../assets/favicons/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/assets/favicons/favicon-32x32.png?v1"
+      href="../../assets/favicons/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/assets/favicons/favicon-16x16.png"
+      href="../../assets/favicons/favicon-16x16.png"
     />
-    <link rel="manifest" href="/assets/favicons/site.webmanifest" />
+    <link rel="manifest" href="../../assets/favicons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="../../assets/favicons/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
 
     <!-- Preloads -->
-    <link rel="preload" as="image" href="/assets/svgs/logo-white.svg" />
+    <link rel="preload" as="image" href="/assets/images/cwd-black.png" />
     <link
       rel="preload"
       as="font"
@@ -90,11 +98,7 @@
         Home page - House Painting Contractors | Painters and Co. | TestCity, WA
         About Page - About us | Painters and Co.
         -->
-    <title>
-      {% if page.url == '/'%} {{ title }} | {{ client.name }} | {{
-      client.address.city }}, {{ client.address.state }} {% else %} {{ title }}
-      | {{ client.name }} {% endif %}
-    </title>
+    <title>{{ title }} | {{ client.name }}</title>
   </head>
   <body>
     <!--Screen reader skip main nav-->
